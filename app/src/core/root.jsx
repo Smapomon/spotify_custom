@@ -2,6 +2,7 @@ import React from "react";
 import { ConnectedRouter } from "connected-react-router";
 import { Provider, connect } from "react-redux";
 import Routes from "Core/routes";
+import TitleBar from "Core/titlebar";
 import "./root.css";
 
 class Root extends React.Component {
@@ -11,7 +12,8 @@ class Root extends React.Component {
     return (
       <Provider store={store}>
         <ConnectedRouter history={history}>
-          <Routes></Routes>
+          <TitleBar/>
+          <Routes/>
         </ConnectedRouter>
       </Provider>
     );

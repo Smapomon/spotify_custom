@@ -49,7 +49,9 @@ async function createWindow() {
   win = new BrowserWindow({
     width: 800,
     height: 600,
-    title: `Getting started with secure-electron-template (v.${app.getVersion()})`,
+    title: `Custom-Spotify (v.${app.getVersion()})`,
+    titleBarStyle: 'customButtonsOnHover',
+    frame: false,
     webPreferences: {
       devTools: isDev,
       nodeIntegration: false,

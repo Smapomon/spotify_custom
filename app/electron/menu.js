@@ -15,9 +15,6 @@ var MenuBuilder = function(mainWindow, appName) {
               label: appName,
               submenu: [
                 {
-                  role: "about"
-                },
-                {
                   type: "separator"
                 },
                 {
@@ -187,18 +184,6 @@ var MenuBuilder = function(mainWindow, appName) {
                   role: "close"
                 }
               ])
-        ]
-      },
-      {
-        role: "help",
-        submenu: [
-          {
-            label: "Learn More",
-            click: async () => {
-              const { shell } = require("electron");
-              await shell.openExternal("https://electronjs.org");
-            }
-          }
         ]
       }
     ];
